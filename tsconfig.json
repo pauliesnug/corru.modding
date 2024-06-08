@@ -1,0 +1,13 @@
+{
+	"extends": "@flowr/tsconfig/tsconfig.strict.json",
+	"compilerOptions": {
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"types": ["vitest/globals", "node", "vite/client"],
+		"exactOptionalPropertyTypes": false,
+		"noPropertyAccessFromIndexSignature": false,
+		"removeComments": false,
+		"skipDefaultLibCheck": true,
+		"skipLibCheck": true
+	},
+	"exclude": ["**/node_modules/**", "**/dist/**", "**/build/**", "**/data/**"]
+}

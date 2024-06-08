@@ -1,0 +1,77 @@
+{
+	"name": "corru.modding",
+	"type": "module",
+	"version": "1.0.0",
+	"packageManager": "pnpm@9.2.0",
+	"license": "Apache-2.0",
+	"funding": "https://ko-fi.com/pauliesnug",
+	"homepage": "https://corru.observer",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/pauliesnug/corru.modding.git",
+		"directory": "/"
+	},
+	"bugs": {
+		"url": "https://github.com/pauliesnug/corru.modding/issues"
+	},
+	"keywords": ["modding", "corru", "corru.observer"],
+	"sideEffects": false,
+	"exports": {
+		".": {
+
+		}
+	},
+	"files": [
+		"LICENSE",
+		"README.md",
+		"dist/**/*.cjs",
+		"dist/**/*.d.cts",
+		"dist/**/*.d.mts",
+		"dist/**/*.d.ts",
+		"dist/**/*.js",
+		"dist/**/*.mjs"
+	],
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"test": "vitest run",
+		"test:update": "vitest -u",
+		"test:ui": "vitest --ui",
+		"test:ci": "pnpm build && pnpm lint && pnpm test",
+		"build": "unbuild",
+		"stub": "unbuild --stub",
+		"lint": "pnpm eslint --cache .",
+		"lint:fix": "pnpm lint --fix",
+		"release": "bumpp -r",
+		"dev": "pnpm stub"
+	},
+	"dependencies": {
+		"@flowr/eslint-config": "^3.5.3",
+		"@pixi/gif": "^3.0.1",
+		"@shopify/draggable": "^1.1.3",
+		"detect-gpu": "^5.0.38",
+		"howler": "^2.2.4",
+		"lz-string": "^1.5.0",
+		"pixi.js": "^8.1.6",
+		"swup": "^4.6.1"
+	},
+	"devDependencies": {
+		"@flowr/eslint-config": "^3.5.3",
+		"@flowr/tsconfig": "^3.5.3",
+		"@types/howler": "^2.2.11",
+		"@types/node": "^20.14.2",
+		"bumpp": "^9.4.1",
+		"esbuild": "^0.21.4",
+		"eslint": "npm:eslint-ts-patch@9.4.0-0",
+		"eslint-ts-patch": "9.4.0-0",
+		"tsx": "^4.13.3",
+		"typescript": "^5.4.5",
+		"unbuild": "^2.0.0",
+		"vite": "^5.2.13",
+		"vitest": "^1.6.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
